@@ -1,0 +1,93 @@
+{
+  "name": "oh-my-droid",
+  "version": "1.0.0",
+  "description": "Multi-agent orchestration for Factory Droid - Sisyphus-style automation with custom droids, skills, and slash commands",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "oh-my-droid": "dist/cli/index.js",
+    "omd": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "droids",
+    "skills",
+    "commands",
+    "hooks",
+    "templates",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/build.mjs",
+    "build:bridge": "node scripts/build.mjs",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "format": "prettier --write src/**/*.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "better-sqlite3": "^12.6.2",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "jsonc-parser": "^3.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.19.7",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "@vitest/ui": "^4.0.17",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.53.0",
+    "vitest": "^4.0.17"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/user/oh-my-droid.git"
+  },
+  "homepage": "https://github.com/user/oh-my-droid#readme",
+  "bugs": {
+    "url": "https://github.com/user/oh-my-droid/issues"
+  },
+  "author": "User",
+  "license": "MIT",
+  "keywords": [
+    "factory",
+    "droid",
+    "ai",
+    "agent",
+    "multi-agent",
+    "orchestration",
+    "sisyphus",
+    "automation",
+    "custom-droids",
+    "skills"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
