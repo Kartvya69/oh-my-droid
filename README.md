@@ -8,13 +8,27 @@ Oh-My-Droid brings the power of [oh-my-claudecode](https://github.com/Yeachan-He
 
 ## Quick Start
 
-**Step 1: Install**
+### Option 1: Install from npm (when published)
 ```bash
 npm install -g oh-my-droid
 omd install
 ```
 
-**Step 2: Use Magic Keywords**
+### Option 2: Install from source (local development)
+```bash
+git clone https://github.com/Kartvya69/oh-my-droid.git
+cd oh-my-droid
+./install.sh link    # or: npm link
+```
+
+### Option 3: Quick setup script
+```bash
+git clone https://github.com/Kartvya69/oh-my-droid.git
+cd oh-my-droid
+./scripts/link.sh
+```
+
+**Use Magic Keywords**
 ```
 autopilot: build a REST API for managing tasks
 ```
